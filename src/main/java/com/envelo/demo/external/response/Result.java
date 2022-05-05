@@ -1,5 +1,5 @@
 
-package com.envelo.demo.model;
+package com.envelo.demo.external.response;
 
 import java.util.HashMap;
 import java.util.List;
@@ -11,45 +11,32 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import lombok.ToString;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
     "id",
     "name",
-    "status",
-    "species",
-    "type",
-    "gender",
-    "origin",
-    "location",
-    "image",
+    "air_date",
     "episode",
+    "characters",
     "url",
     "created"
 })
 @Generated("jsonschema2pojo")
-public class CharacterResponse {
+@ToString
+public class Result {
 
     @JsonProperty("id")
     private Integer id;
     @JsonProperty("name")
     private String name;
-    @JsonProperty("status")
-    private String status;
-    @JsonProperty("species")
-    private String species;
-    @JsonProperty("type")
-    private String type;
-    @JsonProperty("gender")
-    private String gender;
-    @JsonProperty("origin")
-    private Origin origin;
-    @JsonProperty("location")
-    private Location location;
-    @JsonProperty("image")
-    private String image;
+    @JsonProperty("air_date")
+    private String airDate;
     @JsonProperty("episode")
-    private List<String> episode = null;
+    private String episode;
+    @JsonProperty("characters")
+    private List<String> characters = null;
     @JsonProperty("url")
     private String url;
     @JsonProperty("created")
@@ -77,84 +64,34 @@ public class CharacterResponse {
         this.name = name;
     }
 
-    @JsonProperty("status")
-    public String getStatus() {
-        return status;
+    @JsonProperty("air_date")
+    public String getAirDate() {
+        return airDate;
     }
 
-    @JsonProperty("status")
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    @JsonProperty("species")
-    public String getSpecies() {
-        return species;
-    }
-
-    @JsonProperty("species")
-    public void setSpecies(String species) {
-        this.species = species;
-    }
-
-    @JsonProperty("type")
-    public String getType() {
-        return type;
-    }
-
-    @JsonProperty("type")
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    @JsonProperty("gender")
-    public String getGender() {
-        return gender;
-    }
-
-    @JsonProperty("gender")
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    @JsonProperty("origin")
-    public Origin getOrigin() {
-        return origin;
-    }
-
-    @JsonProperty("origin")
-    public void setOrigin(Origin origin) {
-        this.origin = origin;
-    }
-
-    @JsonProperty("location")
-    public Location getLocation() {
-        return location;
-    }
-
-    @JsonProperty("location")
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-
-    @JsonProperty("image")
-    public String getImage() {
-        return image;
-    }
-
-    @JsonProperty("image")
-    public void setImage(String image) {
-        this.image = image;
+    @JsonProperty("air_date")
+    public void setAirDate(String airDate) {
+        this.airDate = airDate;
     }
 
     @JsonProperty("episode")
-    public List<String> getEpisode() {
+    public String getEpisode() {
         return episode;
     }
 
     @JsonProperty("episode")
-    public void setEpisode(List<String> episode) {
+    public void setEpisode(String episode) {
         this.episode = episode;
+    }
+
+    @JsonProperty("characters")
+    public List<String> getCharacters() {
+        return characters;
+    }
+
+    @JsonProperty("characters")
+    public void setCharacters(List<String> characters) {
+        this.characters = characters;
     }
 
     @JsonProperty("url")

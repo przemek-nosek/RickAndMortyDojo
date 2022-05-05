@@ -1,5 +1,5 @@
 
-package com.envelo.demo.model;
+package com.envelo.demo.external.response;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,5 +1,5 @@
 
-package com.envelo.demo.model;
+package com.envelo.demo.external.response;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "url"
 })
 @Generated("jsonschema2pojo")
-public class Origin {
+public class Location {
 
     @JsonProperty("name")
     private String name;

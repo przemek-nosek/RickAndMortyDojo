@@ -1,4 +1,4 @@
-package com.envelo.demo.model.dto;
+package com.envelo.demo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class SeasonEpisodeCountDto {
+public class SeasonEpisodeCount {
     private String season;
-    private String episodeCount;
+    private int episodeCount;
 }
